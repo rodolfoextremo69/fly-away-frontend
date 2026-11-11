@@ -1,0 +1,313 @@
+
+
+
+/* Estilos generales */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Registro, Login y Detalle de reserva */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #193765, #3188bc);
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px #0002;
+  color: #333;
+}
+
+.auth-card h1,
+.auth-card h2 {
+  text-align: center;
+  color: #183568;
+}
+
+.auth-card h1 {
+  margin-bottom: 20px;
+}
+
+.auth-card h2 {
+  margin-bottom: 25px;
+}
+
+.auth-card label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  color: #222;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 24px;
+  background: #1769c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.auth-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-card > p {
+  text-align: center;
+}
+
+.auth-card a {
+  color: #1769c2;
+}
+
+.error {
+  color: #c62828;
+}
+
+.success {
+  color: #16803c;
+}
+
+
+/* Pantalla de vuelos */
+
+.flights-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #193765, #3188bc);
+  padding: 30px 20px;
+}
+
+.flights-container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.flights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.flights-header h1 {
+  margin-bottom: 10px;
+}
+
+.flights-header button {
+  background: white;
+  color: #1769c2;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.search-card,
+.results-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px #0002;
+  color: #183568;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.search-grid label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.search-grid input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  color: #222;
+}
+
+.search-button {
+  background: #1769c2;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 8px;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+.search-button:disabled {
+  opacity: 0.6;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #1769c2;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+tbody tr:hover {
+  background: #f0f6ff;
+}
+
+@media (max-width: 700px) {
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flights-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+/* Botones de reserva */
+
+.booking-button {
+  background: #1769c2;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+.booking-button:hover {
+  background: #104e96;
+}
+
+.booking-button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Mensaje de reserva correcta */
+
+.booking-success {
+  background: #e9f8ee;
+  border: 1px solid #b6e0c1;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: #176b32;
+}
+
+.booking-success h3 {
+  margin-top: 0;
+}
+
+.booking-success a {
+  color: #1769c2;
+  font-weight: bold;
+}
+
+/* Mensaje de error */
+
+.booking-error {
+  background: #ffeaea;
+  color: #b71c1c;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Detalle de reserva */
+
+.booking-detail {
+  margin: 20px 0;
+}
+
+.booking-detail p {
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  margin: 0;
+}
+
+
+
+/* Navegación */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  background: #ffffff;
+  color: #1769c2;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  background: #e8f2ff;
+}
+
+.results-card a {
+  color: #1769c2;
+  font-weight: bold;
+}
+
+.results-card a:hover {
+  text-decoration: underline;
+}
+  
